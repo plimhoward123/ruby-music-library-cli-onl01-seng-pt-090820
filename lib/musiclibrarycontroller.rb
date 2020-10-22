@@ -85,9 +85,8 @@ class MusicLibraryController
   def play_song
     puts "Which song number would you like to play?"
     index = gets.chomp.to_i
-    arry = Song.all.sort_by {|name| name.name}
-    obj = arry[index - 1]
-    puts "Playing #{obj.name} by #{obj.artist.name}"
+    orgnized = Song.all.sort_by {|sng| sng.name}.uniq
+    
   end
 
 end
