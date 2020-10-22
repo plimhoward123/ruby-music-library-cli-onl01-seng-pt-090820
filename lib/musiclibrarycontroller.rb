@@ -36,7 +36,7 @@ class MusicLibraryController
   end
 
   def list_songs
-    orgnized = Song.all.sort_by {|sng| sng.name}
+    orgnized = Song.all.sort_by {|sng| sng.name}.uniq
     puts orgnized
     orgnized.each_with_index do |song,index|
       puts ((index + 1).to_s + ". " + song.artist.name + " - " + song.name + " - " + song.genre.name)
