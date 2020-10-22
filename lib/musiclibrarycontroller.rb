@@ -43,7 +43,10 @@ class MusicLibraryController
   end
 
   def list_artists
-
+    orgnized = Artist.all.sort_by { |artst| artst.name}
+    orgnized.each_with_index do |artist, index|
+      puts ((index +1 ) + ". " + artist.name)
+    end
   end
 
   def list_genres
