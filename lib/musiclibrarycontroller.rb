@@ -90,6 +90,7 @@ class MusicLibraryController
       puts "Playing #{orgnized[index - 1].name} by #{orgnized[index - 1].artist.name}"
     else
       nil
+    end
   end
 
 end
