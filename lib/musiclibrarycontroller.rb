@@ -41,6 +41,7 @@ class MusicLibraryController
     orgnized.each_with_index do |song,index|
       tmparry << song.name
     end
+    puts tmparry
   end
 
   def list_artists
