@@ -62,7 +62,7 @@ class MusicLibraryController
     if (artist != nil)
       tmp = artist.songs.sort_by { |songs| songs.name}
       tmp.each_with_index do |song, index|
-        puts ((index + 1).to_s +". " + song.name)
+        puts ((index + 1).to_s + ". " + song.name)
       end
     else
       nil
