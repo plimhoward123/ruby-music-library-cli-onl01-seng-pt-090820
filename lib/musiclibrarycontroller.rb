@@ -38,7 +38,7 @@ class MusicLibraryController
   def list_songs
     orgnized = Song.all.map {|name| name.name}
     orgnized.each_with_index do |song,index|
-      puts ((index + 1).to_s + ". " + song.artist.name + " - " + song.name + " - " song.genre.name)
+      puts ((index + 1).to_s + ". " + song.artist.name + " - " + song.name + " - " + song.genre.name)
     end
   end
 
