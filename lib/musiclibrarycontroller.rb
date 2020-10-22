@@ -76,6 +76,7 @@ class MusicLibraryController
       tmp = genre.songs.sort_by { |songs| song.name}
       tmp.each_with_index do |songs, index|
         puts ((index + 1).to_s + ". " + songs.artist.name +  " - " + songs.name)
+      end
     else
       nil
     end
