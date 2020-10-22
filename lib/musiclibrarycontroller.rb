@@ -73,7 +73,7 @@ class MusicLibraryController
     puts "Please enter the name of a genre:"
     genre = Genre.find_by_name(gets.chomp)
     if (genre != nil)
-      tmp = genre.songs.sort_by { |songs| song.name}
+      tmp = genre.songs.sort_by { |song| song.name}
       tmp.each_with_index do |songs, index|
         puts ((index + 1).to_s + ". " + songs.artist.name +  " - " + songs.name)
       end
