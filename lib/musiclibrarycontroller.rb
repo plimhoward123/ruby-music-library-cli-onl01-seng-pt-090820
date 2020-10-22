@@ -37,8 +37,9 @@ class MusicLibraryController
 
   def list_songs
     orgnized = Song.all.sort_by {|sng| sng.name}.uniq
+    tmparry = []
     orgnized.each_with_index do |song,index|
-      puts song.name
+      tmparry << song.name
     end
   end
 
