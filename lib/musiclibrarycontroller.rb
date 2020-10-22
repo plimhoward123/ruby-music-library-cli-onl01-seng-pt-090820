@@ -88,8 +88,8 @@ class MusicLibraryController
     if (index > 1 && index < 4)
       orgnized = Song.all.sort_by {|sng| sng.name}.uniq
       puts "Playing #{orgnized[index - 1].name} by #{orgnized[index - 1].artist.name}"
-    else 
+    else
       nil
-  end 
+  end
 
 end
