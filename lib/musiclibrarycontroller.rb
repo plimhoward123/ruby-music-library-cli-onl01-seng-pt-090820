@@ -50,11 +50,19 @@ class MusicLibraryController
   end
 
   def list_genres
-
+    orgnized = Genre.all.sort_by { |gnre| gnre.name}
+    orgnized.each_with_index do |genre,index|
+      puts ((index +1).to_s + ". " + genre.name)
+    end
   end
 
   def list_songs_by_artist
+    puts "Please enter the name of an artist:"
+    if (Artist.find_by_name(gets.chomp) != nil)
 
+    else
+      nil
+    end
   end
 
   def list_songs_by_genre
